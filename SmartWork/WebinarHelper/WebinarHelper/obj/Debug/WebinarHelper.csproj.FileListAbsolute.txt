@@ -1,0 +1,14 @@
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\bin\Debug\WebinarHelper.exe.config
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\bin\Debug\WebinarHelper.exe
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\bin\Debug\WebinarHelper.pdb
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\obj\Debug\WebinarHelper.csprojAssemblyReference.cache
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\obj\Debug\WebinarHelper.Form1.resources
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\obj\Debug\WebinarHelper.Properties.Resources.resources
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\obj\Debug\WebinarHelper.csproj.GenerateResource.cache
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\obj\Debug\WebinarHelper.csproj.CoreCompileInputs.cache
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\obj\Debug\WebinarHelper.exe
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\obj\Debug\WebinarHelper.pdb
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\obj\Debug\WebinarHelper.Form2.resources
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\obj\Debug\WebinarHelper.csproj.ResolveComReference.cache
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\obj\Debug\WebinarHelper.Form3.resources
+C:\Users\WB547147\Documents\Developer\C#\SmartWork\WebinarHelper\WebinarHelper\obj\Debug\WebinarHelper.Form4.resources
