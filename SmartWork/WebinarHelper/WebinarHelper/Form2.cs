@@ -24,8 +24,10 @@ namespace WebinarHelper
         public Form2()
         {
             InitializeComponent();
-            comboBox1.Items.Add("speaker");      
-    }
+            
+            comboBox1.Items.Add("Speaker");
+            comboBox1.Items.Add("Webinar");
+        }
     
 
         private void Form2_Load(object sender, EventArgs e)
