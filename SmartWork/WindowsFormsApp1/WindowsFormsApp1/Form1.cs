@@ -52,15 +52,24 @@ namespace WindowsFormsApp1
             dataGridView1.ColumnCount = colCount;
             dataGridView1.RowCount = rowCount;
 
-            for (int i = 1; i <= rowCount; i++)
+            for (int i = 1; i <= colCount; i++)
+            {
+                dataGridView1.Columns[i - 1].HeaderText = xlRange.Cells[1, i].Value2.ToString();
+            }
+            textBox2.Text = xlRange.Cells[1, 1].Value2;
+            textBox3.Text = xlRange.Cells[1, 2].Value2;
+            textBox4.Text = xlRange.Cells[1, 3].Value2;
+            textBox5.Text = xlRange.Cells[1, 4].Value2;
+            textBox6.Text = xlRange.Cells[1, 5].Value2;
+            textBox7.Text = xlRange.Cells[1, 6].Value2;
+            textBox8.Text = xlRange.Cells[1, 7].Value2;
+            textBox9.Text = xlRange.Cells[1, 8].Value2;
+
+            for (int i = 2; i <= rowCount; i++)
             {
                 for (int j = 1; j <= colCount; j++)
                 {
-
-
                     //write the value to the Grid  
-
-
                     if (xlRange.Cells[i, j] != null && xlRange.Cells[i, j].Value2 != null)
                     {
                         dataGridView1.Rows[i - 1].Cells[j - 1].Value = xlRange.Cells[i, j].Value2.ToString();
@@ -107,7 +116,7 @@ namespace WindowsFormsApp1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            fileName = "C:\\Users\\WB547147\\Documents\\Sheila\\" + comboBox1.Text;
+            fileName = "C:\\Users\\WB547147\\Documents\\Sheila\\budget\\" + comboBox1.Text;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -121,6 +130,49 @@ namespace WindowsFormsApp1
             {
                 textBox1.Text = folderBrowserDialog1.SelectedPath;
                 destinationFolder = textBox1.Text;
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                int x = dataGridView1.ColumnCount;
+                for (int i = 1; i< x; i++)
+                {
+                    if (row.Cells[i].Value == null)
+                        row.Cells[i].Value = string.Empty;
+                }
+                textBox10.Text = row.Cells[0].Value.ToString();
+                textBox11.Text = row.Cells[1].Value.ToString();
+                textBox12.Text = row.Cells[2].Value.ToString();
+                textBox13.Text = row.Cells[3].Value.ToString();
+                textBox14.Text = row.Cells[4].Value.ToString();
+                textBox15.Text = row.Cells[5].Value.ToString();
+                textBox16.Text = row.Cells[6].Value.ToString();
+                //textBox17.Text = row.Cells[7].Value.ToString();
+               
             }
         }
     }
