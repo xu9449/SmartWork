@@ -16,6 +16,8 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         Form2 f2 = new Form2();
+
+        // define the destination folder for button "Open"
         string destinationFolder = " ";
 
         private string fileName;
@@ -25,16 +27,47 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+        //private void panel1_Paint(object sender, PaintEventArgs e)
+        //{
 
-        }
-
+        //}
+        
+        //Button "Add"
         private void button1_Click(object sender, EventArgs e)
         {
             f2.Show();
         }
 
+        //Button "Load"
+        private void button3_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            Directory.CreateDirectory(textBox1.Text);
+            DirectoryInfo dir = new DirectoryInfo(textBox1.Text);
+            FileInfo[] files = dir.GetFiles("*.xlsx");
+            foreach (FileInfo file in files)
+            {
+                comboBox1.Items.Add(file);
+            }
+        }
+
+        //Button "change"
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Text = folderBrowserDialog1.SelectedPath;
+                destinationFolder = textBox1.Text;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fileName = destinationFolder +"\\" + comboBox1.Text;
+        }
+
+
+        //Button "Open"
         private void button2_Click(object sender, EventArgs e)
         {
             string fname = " ";
@@ -101,37 +134,12 @@ namespace WindowsFormsApp1
             Marshal.ReleaseComObject(xlApp);
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            comboBox1.Items.Clear();
-            Directory.CreateDirectory(textBox1.Text);
-
-            DirectoryInfo dir = new DirectoryInfo(textBox1.Text);
-            FileInfo[] files = dir.GetFiles("*.xlsx");
-            foreach (FileInfo file in files)
-            {
-                comboBox1.Items.Add(file);
-            }
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            fileName = "C:\\Users\\WB547147\\Documents\\Sheila\\budget\\" + comboBox1.Text;
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
-            {
-                textBox1.Text = folderBrowserDialog1.SelectedPath;
-                destinationFolder = textBox1.Text;
-            }
-        }
+        
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -159,10 +167,10 @@ namespace WindowsFormsApp1
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 int x = dataGridView1.ColumnCount;
-                for (int i = 1; i< x; i++)
+                for (int i = 0; i< x; i++)
                 {
                     if (row.Cells[i].Value == null)
-                        row.Cells[i].Value = string.Empty;
+                        row.Cells[i].Value = " - ";
                 }
                 textBox10.Text = row.Cells[0].Value.ToString();
                 textBox11.Text = row.Cells[1].Value.ToString();
