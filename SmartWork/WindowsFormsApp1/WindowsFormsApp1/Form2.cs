@@ -114,5 +114,10 @@ namespace WindowsFormsApp1
         {
             return textBox1.Text;
         }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

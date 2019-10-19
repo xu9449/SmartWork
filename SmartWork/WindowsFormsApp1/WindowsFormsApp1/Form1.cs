@@ -35,6 +35,11 @@ namespace WindowsFormsApp1
         //Button "Add"
         private void button1_Click(object sender, EventArgs e)
         {
+            if(f2.IsDisposed)
+            {
+                f2 = new Form2();
+                f2.Show();
+            }
             f2.Show();
         }
 
@@ -49,6 +54,7 @@ namespace WindowsFormsApp1
             {
                 comboBox1.Items.Add(file);
             }
+            destinationFolder = textBox1.Text;
         }
 
         //Button "change"
@@ -182,6 +188,76 @@ namespace WindowsFormsApp1
                 //textBox17.Text = row.Cells[7].Value.ToString();
                
             }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox14_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox16_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
