@@ -120,5 +120,10 @@ namespace WebinarHelper
         {
             fileName = "C:\\Users\\WB547147\\Documents\\Sheila\\" + comboBox1.Text;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
