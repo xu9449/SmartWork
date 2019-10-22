@@ -132,5 +132,15 @@ namespace WebinarHelper
                 index = richTextBox1.Text.IndexOf(comboBox1.Text, index) + 1;
             }
         }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

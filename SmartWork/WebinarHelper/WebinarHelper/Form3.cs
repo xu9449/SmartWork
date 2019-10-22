@@ -34,5 +34,16 @@ namespace WebinarHelper
             string fileLocation = "C:\\Users\\WB547147\\Documents\\Work Template\\DryrunTemplate";
             Process.Start(fileLocation);
         }
+
+        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+
+        }
     }
 }

@@ -32,22 +32,22 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button7 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -101,15 +101,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input Webinar Info";
             // 
-            // button3
+            // button5
             // 
-            this.button3.Location = new System.Drawing.Point(17, 72);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(223, 37);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Open Adobe Event";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button5.Location = new System.Drawing.Point(137, 194);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(103, 32);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Save to folder";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(17, 194);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(114, 32);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Open Form";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label3
             // 
@@ -164,25 +174,15 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(96, 20);
             this.dateTimePicker1.TabIndex = 0;
             // 
-            // button4
+            // button3
             // 
-            this.button4.Location = new System.Drawing.Point(17, 194);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(114, 32);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Open Form";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(137, 194);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(103, 32);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Save to folder";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button3.Location = new System.Drawing.Point(17, 72);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(223, 37);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Open Adobe Event";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox2
             // 
@@ -236,15 +236,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(223, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(165, 43);
@@ -254,6 +245,15 @@
             this.button7.Text = "Search";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(17, 16);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(223, 21);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form2
             // 
@@ -267,6 +267,8 @@
             this.Controls.Add(this.richTextBox1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
