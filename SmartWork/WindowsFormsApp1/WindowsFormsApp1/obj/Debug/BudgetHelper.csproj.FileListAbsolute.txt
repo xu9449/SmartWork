@@ -10,3 +10,4 @@ C:\Users\WB547147\Documents\GitHub\WinformApplication\SmartWork\WindowsFormsApp1
 C:\Users\WB547147\Documents\GitHub\WinformApplication\SmartWork\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\WB547147\Documents\GitHub\WinformApplication\SmartWork\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\WB547147\Documents\GitHub\WinformApplication\SmartWork\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\BudgetHelper.csproj.ResolveComReference.cache
+C:\Users\WB547147\Documents\GitHub\WinformApplication\SmartWork\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources

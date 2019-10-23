@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         Form2 f2 = new Form2();
+        Form3 f3 = new Form3();
 
         // define the destination folder for button "Open"
         string destinationFolder = " ";
@@ -258,6 +259,11 @@ namespace WindowsFormsApp1
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            f3.Show();
         }
     }
 }
