@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace WindowsFormsApp1
 {
@@ -264,6 +265,11 @@ namespace WindowsFormsApp1
         private void button5_Click(object sender, EventArgs e)
         {
             f3.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
