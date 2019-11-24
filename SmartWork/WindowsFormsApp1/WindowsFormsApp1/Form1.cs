@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.IO;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Diagnostics;
 
 namespace WindowsFormsApp1
 {
@@ -70,12 +71,6 @@ namespace WindowsFormsApp1
             showFiles(1);
         }
 
-
-        //Button "Open"
-        private void button2_Click(object sender, EventArgs e)
-        {
-            showFiles(1);
-        }
 
         private void showFiles(int page)
         {
@@ -258,6 +253,12 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (f3.IsDisposed)
+            {
+                f3 = new Form3();
+                f3.Show();
+            }
+            
             f3.Show();
         }
 
@@ -284,6 +285,11 @@ namespace WindowsFormsApp1
         private void button10_Click(object sender, EventArgs e)
         {
             showFiles(5);
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            Process.Start(fileName);
         }
     }
 }
