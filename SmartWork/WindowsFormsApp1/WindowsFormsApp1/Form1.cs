@@ -28,11 +28,6 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        //private void panel1_Paint(object sender, PaintEventArgs e)
-        //{
-
-        //}
         
         //Button "Add"
         private void button1_Click(object sender, EventArgs e)
@@ -59,7 +54,7 @@ namespace WindowsFormsApp1
             destinationFolder = textBox1.Text;
         }
 
-        //Button "change"
+        //Button "Choose"
         private void button4_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
@@ -72,18 +67,27 @@ namespace WindowsFormsApp1
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             fileName = destinationFolder +"\\" + comboBox1.Text;
+            showFiles(1);
         }
 
 
         //Button "Open"
         private void button2_Click(object sender, EventArgs e)
         {
+            showFiles(1);
+        }
+
+        private void showFiles(int page)
+        {
+            dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
+
             string fname = " ";
             fname = fileName;
 
             Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(fname);
-            Microsoft.Office.Interop.Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+            Microsoft.Office.Interop.Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[page];
             Microsoft.Office.Interop.Excel.Range xlRange = xlWorksheet.UsedRange;
 
             int rowCount = xlRange.Rows.Count;
@@ -95,16 +99,13 @@ namespace WindowsFormsApp1
 
             for (int i = 1; i <= colCount; i++)
             {
+                if (xlRange.Cells[1, i].Value2 == null)
+                {
+                    xlRange.Cells[1, i].Value2 = " ";
+                }
                 dataGridView1.Columns[i - 1].HeaderText = xlRange.Cells[1, i].Value2.ToString();
             }
-            textBox2.Text = xlRange.Cells[1, 1].Value2;
-            textBox3.Text = xlRange.Cells[1, 2].Value2;
-            textBox4.Text = xlRange.Cells[1, 3].Value2;
-            textBox5.Text = xlRange.Cells[1, 4].Value2;
-            textBox6.Text = xlRange.Cells[1, 5].Value2;
-            textBox7.Text = xlRange.Cells[1, 6].Value2;
-            textBox8.Text = xlRange.Cells[1, 7].Value2;
-            textBox9.Text = xlRange.Cells[1, 8].Value2;
+
 
             for (int i = 2; i <= rowCount; i++)
             {
@@ -180,14 +181,7 @@ namespace WindowsFormsApp1
                     if (row.Cells[i].Value == null)
                         row.Cells[i].Value = " - ";
                 }
-                textBox10.Text = row.Cells[0].Value.ToString();
-                textBox11.Text = row.Cells[1].Value.ToString();
-                textBox12.Text = row.Cells[2].Value.ToString();
-                textBox13.Text = row.Cells[3].Value.ToString();
-                textBox14.Text = row.Cells[4].Value.ToString();
-                textBox15.Text = row.Cells[5].Value.ToString();
-                textBox16.Text = row.Cells[6].Value.ToString();
-                //textBox17.Text = row.Cells[7].Value.ToString();
+                
                
             }
         }
@@ -270,6 +264,26 @@ namespace WindowsFormsApp1
         private void button6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            showFiles(2);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            showFiles(3);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            showFiles(4);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            showFiles(5);
         }
     }
 }

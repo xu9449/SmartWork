@@ -92,13 +92,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //for(int i = 0; i < fileList.Length; i++)
-            //{
-            //    string sourceFile = fileList[i];
-            //    string filename = getFileName(sourceFile);
-            //    destinationFolder = destinationFolder + "\\" + filename;
-            //    System.IO.File.Move(sourceFile, destinationFolder);
-            //}
+            
 
             foreach (string file in fileList)
             {

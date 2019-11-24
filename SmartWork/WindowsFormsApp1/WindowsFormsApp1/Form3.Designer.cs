@@ -48,6 +48,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form3";
             this.Text = "Room Booking";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form3_FormClosed);
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
