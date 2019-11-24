@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
 
             Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(fname);
-            Microsoft.Office.Interop.Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[2];
+            Microsoft.Office.Interop.Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
             Microsoft.Office.Interop.Excel.Range xlRange = xlWorksheet.UsedRange;
 
             int rowCount = xlRange.Rows.Count;
